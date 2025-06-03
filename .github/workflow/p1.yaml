@@ -1,0 +1,21 @@
+name: Mensajes echo para main
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  msg_echo_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo step1
+        run: echo "🎉 New commit detected on the main branch!"
+      
+      - name: echo step2
+        run: echo "🔄 Starting the workflow..."
+
+      - name: echo step3
+        run: echo "🚀 Performing some checks..."
+
+      - name: echo step4
+        run: echo "✅ Workflow completed successfully!"
