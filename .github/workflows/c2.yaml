@@ -6,6 +6,7 @@ jobs:
   primer_job:
     run-on: ubuntu-latest
     
-  steps:
-    - name: saludo
-      run: echo "hola Mundo"
+    steps:
+      - name: saludo
+        run: echo "hola Mundo"
+        
