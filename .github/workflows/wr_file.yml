@@ -17,4 +17,4 @@ jobs:
         run: echo "texto de muestra para $mifile" >> archivo.txt
 
       - name: lee txt
-        run: cat mifile.txt
+        run: cat $mifile.txt
