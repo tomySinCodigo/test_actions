@@ -8,11 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      env:
+        mifile: archivo
       - name: crear txt
         run: touch archivo.txt
         
       - name: insertar contenido
-        run: echo "texto de muestra" >> archivo.txt
+        run: echo "texto de muestra para $mifile" >> archivo.txt
 
       - name: lee txt
-        run: cat archivo.txt
+        run: cat mifile.txt
