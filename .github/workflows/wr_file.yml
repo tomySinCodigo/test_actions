@@ -1,8 +1,8 @@
 name: escritura y lectura de archivo
 
 on:
-  - workflow-dispatch
-  
+  - workflow_dispatch
+
 jobs:
   job_creacion:
     runs-on: ubuntu-latest
