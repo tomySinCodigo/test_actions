@@ -1,7 +1,7 @@
-name: Prueba needs
+name: escritura y lectura de archivo
 
 on:
-  - push
+  - workflow-dispatch
   
 jobs:
   job_creacion:
@@ -13,11 +13,6 @@ jobs:
         
       - name: insertar contenido
         run: echo "texto de muestra" >> archivo.txt
-      
-  job2_lectura:
-    needs: job_creacion
-    runs-on: ubuntu-latest
-    
-    steps:
+
       - name: lee txt
         run: cat archivo.txt
