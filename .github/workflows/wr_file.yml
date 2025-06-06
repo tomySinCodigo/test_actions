@@ -6,10 +6,10 @@ on:
 jobs:
   job_creacion:
     runs-on: ubuntu-latest
+    env:
+      mifile: archivo
     
     steps:
-      env:
-        mifile: archivo
       - name: crear txt
         run: touch archivo.txt
         
