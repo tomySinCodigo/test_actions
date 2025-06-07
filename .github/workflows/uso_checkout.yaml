@@ -1,0 +1,13 @@
+name: pruebas con checkout
+on: workflow_dispatch
+
+jobs:
+  primer-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: usando un action
+        uses: actions/checkout@v4
+
+      - name: lista los archivos
+        run: ls -al
