@@ -1,0 +1,14 @@
+name: test obten nombre rama con el contexto
+
+on: workflow_dispatch
+
+jobs:
+  primer-job:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: saluda
+        run: echo "hola"
+        
+      - name: obten rama string
+        run: echo "se ejecuto en la rama: ${{ github.ref }}"
