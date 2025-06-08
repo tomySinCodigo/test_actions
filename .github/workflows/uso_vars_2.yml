@@ -17,7 +17,7 @@ jobs:
         run: echo "NAME=Tomy" >> $GITHUB_OUTPUT
 
       - name: saludo
-        run: echo ${{ steps.asigna_nombre.outputs.NAME }}
+        run: echo "hola ${{ steps.asigna_nombre.outputs.NAME }}"
 
 
   segundo_job:
