@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: usa checkouts
-        uses: actions/checkout@v4s
+        uses: actions/checkout@v4
 
       - name: instala python
         uses: actions/setup-python@v5
