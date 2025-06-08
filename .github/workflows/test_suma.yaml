@@ -28,3 +28,14 @@ jobs:
         with:
           name: test-suma
           path: mi_test.txt
+
+  job-download-artifact:
+    runs-on: ubuntu-latest
+    steps:
+      - name: descarga artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: test-suma
+
+      - name: muestra el contenido del artifact
+        run: cat mi_test.txt
