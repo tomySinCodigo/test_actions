@@ -1,0 +1,26 @@
+name: test suma con salida en un artefacto
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  job-sube-artifact:
+    runs-on: ubuntu-latest
+    steps:
+      - name: usa checkouts
+        uses: actions/checkout@v4s
+
+      - name: instala python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: ejecuta test
+        run: python test.py
+
+      - name: sube artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-suma
+          path: mi_test.txt
