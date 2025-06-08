@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      SALIDA: ${{ needs.primer-job.outputs.NAME }}
+      SALIDA: ${{ needs.primer-job.outputs.salida }}
 
     steps:
       - name: saludame esta! vez del segundo job
