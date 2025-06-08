@@ -1,0 +1,16 @@
+name: variables predeterminadas
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  primer_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: asignando mi variable nombre
+        id: asigna_nombre
+        run: echo "NAME=Tomy" >> $GITHUB_OUTPUT
+
+      - name: saludar nombre
+        run: echo "hola ${{ steps.asigna_nombre.outputs.NAME }}"
