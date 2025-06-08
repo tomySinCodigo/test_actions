@@ -17,7 +17,7 @@ jobs:
           python-version: '3.13'
 
       - name: ejecuta test
-        run: python test.py
+        run: python test.py 4 3
 
       - name: sube artifact
         uses: actions/upload-artifact@v4
