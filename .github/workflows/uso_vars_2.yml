@@ -16,6 +16,10 @@ jobs:
         id: asigna_nombre
         run: echo "NAME=Tomy" >> $GITHUB_OUTPUT
 
+      - name: saludo
+        run: echo ${{ steps.asigna_nombre.outputs.NAME }}
+
+
   segundo_job:
     needs: primer-job
     runs-on: ubuntu-latest
