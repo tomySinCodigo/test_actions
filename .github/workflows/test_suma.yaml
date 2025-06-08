@@ -30,6 +30,7 @@ jobs:
           path: mi_test.txt
 
   job-download-artifact:
+    needs: job-sube-artifact
     runs-on: ubuntu-latest
     steps:
       - name: descarga artifact
