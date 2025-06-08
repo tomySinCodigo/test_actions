@@ -1,0 +1,30 @@
+name: usar salida en otro job
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  primer-job:
+    runs-on: ubuntu-latest
+
+    outputs:
+      salida: ${{ steps.asigna_nombre.outputs.NAME }}
+
+    steps:
+      - name: asignando variable
+        id: asigna_nombre
+        run: echo "NAME=Tomy" >> $GITHUB_OUTPUT
+
+  segundo_job:
+    needs: primer-job
+    runs-on: ubuntu-latest
+
+    env:
+      SALIDA: ${{ needs.primer-job.outputs.NAME }}
+
+    steps:
+      - name: saludame esta! vez del segundo job
+        run: >
+          echo "hola $SALIDA, se puede usar '-' y '_' 
+          para los nombres de los jobs."
